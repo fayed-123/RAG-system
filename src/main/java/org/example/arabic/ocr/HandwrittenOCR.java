@@ -50,6 +50,7 @@ public class HandwrittenOCR {
 
         return contrasted;
     }
+
     // تنظيف النص من الأخطاء الشائعة
     private String cleanText(String text) {
         if (text == null || text.trim().isEmpty()) {
@@ -91,6 +92,7 @@ public class HandwrittenOCR {
             return "OCR_ERROR";
         }
     }
+
     public void processHandwrittenCharacter(HandwrittenCharacter hwChar) {
         String recognizedText = recognizeCharacter(hwChar.getImagePath());
         hwChar.setCharacter(recognizedText);

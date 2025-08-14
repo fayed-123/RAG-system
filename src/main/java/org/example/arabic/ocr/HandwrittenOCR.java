@@ -25,7 +25,6 @@ public class HandwrittenOCR {
         tesseract.setVariable("preserve_interword_spaces", "1");
         tesseract.setVariable("textord_min_linesize", "2.5"); // للخط اليدوي
     }
-
     // تحسين الصورة قبل OCR
     private BufferedImage enhanceImage(BufferedImage original) {
         int width = original.getWidth();
@@ -50,8 +49,6 @@ public class HandwrittenOCR {
 
         return contrasted;
     }
-
-    // تنظيف النص من الأخطاء الشائعة
     private String cleanText(String text) {
         if (text == null || text.trim().isEmpty()) {
             return "NO_TEXT_DETECTED";

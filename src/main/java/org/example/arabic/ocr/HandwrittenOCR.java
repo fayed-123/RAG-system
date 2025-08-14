@@ -50,7 +50,6 @@ public class HandwrittenOCR {
 
         return contrasted;
     }
-
     // تنظيف النص من الأخطاء الشائعة
     private String cleanText(String text) {
         if (text == null || text.trim().isEmpty()) {
